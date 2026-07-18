@@ -28,10 +28,11 @@ A scene may use real, AI, hybrid, or animation production mode. Global libraries
 
 ## Repository status
 
-The repository is in **Genesis / Sprint 0**. The current foundation is intentionally documentation-first so product decisions can stabilize before a technical stack is selected.
+Genesis is **frozen and closed**. Delivery is now in Sprint 0 and proceeds through code, schema, API, UI, sprint artifacts, and ADRs.
 
 ## Start here
 
+- [Genesis — frozen product and platform baseline](docs/genesis/README.md)
 - [Product charter](docs/product/charter.md)
 - [Product principles](docs/product/principles.md)
 - [Domain model](docs/architecture/domain-model.md)
