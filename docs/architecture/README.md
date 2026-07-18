@@ -15,4 +15,6 @@
 
 ## Current delivery
 
-See [Sprint 0](../sprints/sprint-0/README.md) and its [document register](../sprints/sprint-0/document-register.md).
+See [Project State](../PROJECT_STATE.md), [Sprint 0](../sprints/sprint-0/README.md), its [document register](../sprints/sprint-0/document-register.md), and the [ADR index](decisions/README.md).
+
+Later accepted decisions do not rewrite frozen Genesis. They are recorded through current architecture, software design, ADRs, governance specifications, executable schemas, and tests.

@@ -28,7 +28,9 @@ A scene may use real, AI, hybrid, or animation production mode. Global libraries
 
 ## Repository status
 
-Genesis is **frozen and closed**. Delivery is now in Sprint 0 and proceeds through code, schema, API, UI, sprint artifacts, and ADRs.
+Genesis is **frozen and closed**. Sprint 0 — Platform Foundation is **in progress**.
+
+The Java/Spring/Gradle baseline and repository layout are accepted. The first API scaffold is present. Sprint 0 now completes the platform boundaries for persistence, assets, search, identity, audit, AI, rights, localization, and media transparency before filmmaking feature depth begins.
 
 ## Start here
 
@@ -37,6 +39,9 @@ Genesis is **frozen and closed**. Delivery is now in Sprint 0 and proceeds throu
 - [Product principles](docs/product/principles.md)
 - [Domain model](docs/architecture/domain-model.md)
 - [Architecture decisions](docs/architecture/decisions/README.md)
+- [Current project state](docs/PROJECT_STATE.md)
+- [Sprint 0 plan](docs/sprints/sprint-0/README.md)
+- [Sprint 0 document register](docs/sprints/sprint-0/document-register.md)
 - [Roadmap](docs/roadmap.md)
 - [Contributing](CONTRIBUTING.md)
 
@@ -51,6 +56,22 @@ scripts/        Repeatable development and maintenance utilities
 ```
 
 Empty implementation directories are documented here and will be added with their first real files; Git does not track empty directories.
+
+## Foundation data flow
+
+- **PostgreSQL** is the authoritative system of record.
+- **Object storage** holds versioned media binaries.
+- **Apache Solr** is a rebuildable search index for media and localization content.
+- Provider-specific AI, search, storage, identity, and rights integrations remain behind platform ports.
+
+## Build
+
+Java 25 is required. Use the checked-in Gradle wrapper:
+
+```shell
+./gradlew test
+./gradlew :apps:filminex-api:bootRun
+```
 
 ## License
 

@@ -7,6 +7,9 @@
 - Choose application stack and repository tooling through an ADR.
 - Define tenancy, authentication, authorization, and entitlements.
 - Define persistence, asset storage, versioning, and audit events.
+- Establish Solr as a rebuildable media/localization index through a reliable indexing worker.
+- Establish provider-neutral AI and rights seams.
+- Establish first-class localization and the MTI export-disclosure boundary.
 - Establish CI, formatting, tests, and local development after stack selection.
 
 ## Sprint 1 — Story Workspace
