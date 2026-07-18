@@ -15,9 +15,11 @@ Thumbs.db
 *.key
 
 # Dependencies and builds
+.gradle/
 node_modules/
 dist/
 build/
+**/build/
 coverage/
 .next/
 out/
