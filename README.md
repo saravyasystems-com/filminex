@@ -28,9 +28,9 @@ A scene may use real, AI, hybrid, or animation production mode. Global libraries
 
 ## Repository status
 
-Genesis is **frozen and closed**. Sprint 0 — Platform Foundation is **in progress**.
+Genesis and the resolved Sprint 0 architectural baseline are **frozen**. Sprint 0 — Platform Foundation is **in progress**.
 
-The Java/Spring/Gradle baseline and repository layout are accepted. The first API scaffold is present. Sprint 0 now completes the platform boundaries for persistence, assets, search, identity, audit, AI, rights, localization, and media transparency before filmmaking feature depth begins.
+The first API scaffold is present. Sprint 0 now implements and verifies the frozen boundaries for persistence, assets, search, event-driven indexing, AI, rights, localization, capabilities, provenance, and media transparency. Governance and intellectual-property strategy remain Accepted rather than Frozen.
 
 ## Start here
 
@@ -72,6 +72,8 @@ Java 25 is required. Use the checked-in Gradle wrapper:
 ./gradlew test
 ./gradlew :apps:filminex-api:bootRun
 ```
+
+The Sprint 0 frontend direction is React, TypeScript, and Vite; its scaffold is the next engineering foundation deliverable.
 
 ## License
 

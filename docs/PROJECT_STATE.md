@@ -12,7 +12,7 @@
 - Modular-monolith repository layout
 - Initial `filminex-api` application, health configuration, test, wrapper, and CI workflow
 
-## Accepted foundation decisions
+## Frozen architectural baseline
 
 - PostgreSQL is authoritative application state.
 - Media binaries live in versioned object storage.
@@ -24,9 +24,18 @@
 - Localization is first class and connects dialogue, scenes, talent/characters, voice profiles, assets, rights, search, and export.
 - MTI currently has one category, MTI-001 Deepfake Icon, limited to AI/hybrid synthetic or materially altered human likeness or voice.
 
+The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-0023. ADR-0020 and ADR-0021 remain Accepted because governance and intellectual-property strategy are still evolving.
+
+## Current implementation direction
+
+- Backend: Java/Spring Boot with Gradle; exact versions remain implementation policy rather than frozen product architecture.
+- Frontend: React, TypeScript, and Vite.
+- Authentication: provider-neutral seam with a lightweight local-development identity adapter; external provider selection is deferred.
+
 ## Current gaps
 
 - Successful Java 25 CI/build execution has not yet been recorded as Sprint evidence.
+- The React/TypeScript/Vite frontend has not yet been scaffolded or verified.
 - Platform module boundaries and architecture tests are not implemented.
 - PostgreSQL, Flyway, object storage, Solr, outbox/indexing worker, and local infrastructure are not implemented.
 - Identity, capability, audit, AI, rights, localization, and MTI contracts are not implemented.

@@ -9,6 +9,7 @@
 Create a runnable, testable platform skeleton that proves the declared Filminex boundaries:
 
 - Spring Boot application foundation;
+- React, TypeScript, and Vite frontend foundation;
 - PostgreSQL persistence foundation;
 - workspace and identity boundary;
 - Logging Engine foundation;
@@ -21,6 +22,8 @@ Create a runnable, testable platform skeleton that proves the declared Filminex 
 - a local rights-provider seam that can later be replaced by FTRP;
 - the Media Transparency Indicator integration boundary;
 - architecture enforcement and delivery automation.
+
+Authentication remains provider neutral. Sprint 0 supplies a lightweight local-development identity adapter without freezing an external identity provider.
 
 Sprint 0 establishes foundations. It does not implement filmmaking feature depth.
 
@@ -79,6 +82,7 @@ Sprint 0 establishes foundations. It does not implement filmmaking feature depth
 ## Exit criteria
 
 - Application builds and starts locally.
+- Frontend builds and starts locally.
 - Health checks pass.
 - PostgreSQL schema initializes through versioned migrations.
 - Media binaries are stored outside PostgreSQL with immutable version metadata and checksums.
@@ -93,6 +97,7 @@ Sprint 0 establishes foundations. It does not implement filmmaking feature depth
 - Rights decisions can be supplied by the local provider without coupling Filminex to FTRP.
 - MTI decisions are derived only for applicable AI/hybrid human likeness or voice use.
 - CI verifies build, tests, formatting, and architecture rules.
+- CI verifies both backend and frontend foundations.
 - Architecture and software-design documents match the implemented system.
 
 ## Out of scope

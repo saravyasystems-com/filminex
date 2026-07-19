@@ -11,6 +11,8 @@
 - Establish provider-neutral AI and rights seams.
 - Establish first-class localization and the MTI export-disclosure boundary.
 - Establish CI, formatting, tests, and local development after stack selection.
+- Scaffold and verify the React/TypeScript/Vite workspace frontend.
+- Draft the MTI, Media Transparency Council, FTRP-boundary, and IP workstream documents without freezing unresolved governance or legal details.
 
 ## Sprint 1 — Story Workspace
 
@@ -43,5 +45,11 @@
 - Real-time and hybrid production workflows
 - Editing and 3D tool integrations
 - Billing, operational analytics, and marketplace capabilities
+
+## Separate future initiatives
+
+- **FTRP:** full media-creation consent, rights governance, external audit/provenance, and talent-facing approval at platform scale
+- **Media Transparency Council:** governance, certification, standards evolution, and international advocacy after its charter is approved
+- **Deferred integrations:** deep DaVinci Resolve/Blender integration, semantic/vector search, advanced media analysis, and production SolrCloud topology
 
 Dates and delivery commitments will be added only after Sprint 0 architecture and staffing decisions.

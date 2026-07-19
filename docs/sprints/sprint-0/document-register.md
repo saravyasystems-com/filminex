@@ -15,6 +15,7 @@ Documents are updated with the implementation they guide or verify. `Planned` me
 | A-09 | Localization Architecture | Architecture | In progress | Subtitle, dubbing, transcript, voice and export boundaries |
 | A-10 | Media Transparency Architecture | Architecture | In progress | MTI evaluation and export disclosure boundary |
 | A-11 | Deployment Architecture | Architecture | Planned | Environments, runtime services, configuration |
+| A-12 | Frontend Architecture | Architecture | In progress | React/TypeScript/Vite workspace boundary and API integration |
 | D-01 | Repository and Package Design | Software design | In progress | Source layout, package ownership, dependency direction |
 | D-02 | Workspace and Identity Design | Software design | Planned | Entities, services, authorization ports |
 | D-03 | Capability Engine Design | Software design | Planned | Evaluation inputs, decisions, API |
@@ -27,28 +28,39 @@ Documents are updated with the implementation they guide or verify. `Planned` me
 | D-10 | API Conventions | Software design | Planned | Versioning, errors, pagination, idempotency |
 | D-11 | Database Schema | Software design | Planned | Tables, keys, indexes, migration ownership |
 | D-12 | Test Strategy | Software design | Planned | Unit, integration, architecture, contract, migration tests |
+| D-13 | Frontend Foundation Design | Software design | Planned | Application shell, routing, state, API client, test and build conventions |
 
 ## ADR register
 
 | ADR | Decision | Status |
 | --- | --- | --- |
-| ADR-0001 | Documentation-first repository foundation | Accepted |
-| ADR-0002 | JVM application stack and build system | Accepted |
-| ADR-0003 | Repository structure and modular-monolith layout | Accepted |
-| ADR-0004 | Modular architecture enforcement | Accepted |
-| ADR-0005 | PostgreSQL persistence and migration strategy | Accepted |
-| ADR-0006 | Media asset storage and versioning | Accepted |
-| ADR-0007 | Solr search and event-driven indexing | Accepted |
-| ADR-0008 | Identity, tenancy, and authorization boundary | Accepted |
-| ADR-0009 | Audit event and provenance model | Accepted |
-| ADR-0010 | AI provider port and adapter contract | Accepted |
-| ADR-0011 | Rights provider and future FTRP boundary | Accepted |
-| ADR-0012 | Localization as a first-class capability | Accepted |
-| ADR-0013 | Media Transparency Indicator integration boundary | Accepted |
+| ADR-0001 | Product vision | Frozen |
+| ADR-0002 | Product principles | Frozen |
+| ADR-0003 | Story hierarchy | Frozen |
+| ADR-0004 | Modular monolith | Frozen |
+| ADR-0005 | Persistence architecture | Frozen |
+| ADR-0006 | Media storage | Frozen |
+| ADR-0007 | Search architecture | Frozen |
+| ADR-0008 | Event-driven indexing | Frozen |
+| ADR-0009 | AI provider architecture | Frozen |
+| ADR-0010 | Domain libraries | Frozen |
+| ADR-0011 | Character identity versus scene presentation | Frozen |
+| ADR-0012 | Property cascading with provenance | Frozen |
+| ADR-0013 | Reverse data population | Frozen |
+| ADR-0014 | Localization | Frozen |
+| ADR-0015 | Talent rights boundary | Frozen |
+| ADR-0016 | Capability-driven product | Frozen |
+| ADR-0017 | Logging and provenance | Frozen |
+| ADR-0018 | Media Transparency Indicator boundary | Frozen |
+| ADR-0019 | Deepfake Icon applicability and behavior | Frozen |
+| ADR-0020 | Governance boundary | Accepted |
+| ADR-0021 | Intellectual-property workstream | Accepted |
+| ADR-0022 | Sprint 0 scope | Frozen |
+| ADR-0023 | ADR governance | Frozen |
 
 ## Governance workstream
 
-The Media Transparency Foundation also requires MTI vision/specification, Deepfake Icon guidance, an MTCouncil charter draft, and an IP strategy. These governance documents complement ADR-0013; they do not redefine application architecture.
+The Media Transparency Foundation requires an MTI vision/specification, Deepfake Icon guidance, a Media Transparency Council charter draft, an IP strategy, and an FTRP-boundary document. These governance documents complement ADR-0018 through ADR-0021; unresolved governance and legal details remain Accepted or Draft rather than Frozen.
 
 ## Documentation rule
 
