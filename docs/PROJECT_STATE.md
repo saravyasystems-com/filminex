@@ -36,8 +36,8 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 ## Current gaps
 
 - The React/TypeScript/Vite frontend has not yet been scaffolded or verified.
-- PostgreSQL and Flyway foundations are implemented by Sprint 0 Workstream 2;
-  CI verification is pending.
+- PostgreSQL and Flyway foundations are implemented and verified by CI in
+  Sprint 0 Workstream 2.
 - Object storage, Solr, outbox/indexing worker, and remaining local infrastructure are not implemented.
 - Identity, capability, audit, AI, rights, localization, and MTI boundary interfaces exist;
   their functional contracts and adapters are not implemented.
