@@ -1,6 +1,6 @@
 # Filminex Project State
 
-**Updated:** 19 July 2026  
+**Updated:** 29 July 2026
 **Delivery phase:** Sprint 0 — Platform Foundation  
 **Genesis:** Frozen and closed
 
@@ -11,6 +11,7 @@
 - Java 25, Spring Boot 4.1.x, and Gradle 9.6.x baseline
 - Modular-monolith repository layout
 - Initial `filminex-api` application, health configuration, test, wrapper, and CI workflow
+- Workstream 1 module boundaries and architecture tests, verified by CI and merged through PR #1
 
 ## Frozen architectural baseline
 
@@ -34,11 +35,10 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 
 ## Current gaps
 
-- Successful Java 25 CI/build execution has not yet been recorded as Sprint evidence.
 - The React/TypeScript/Vite frontend has not yet been scaffolded or verified.
-- Platform module boundaries, public API packages, and architecture tests are implemented
-  locally by Sprint 0 Workstream 1; Java 25 CI evidence is pending.
-- PostgreSQL, Flyway, object storage, Solr, outbox/indexing worker, and local infrastructure are not implemented.
+- PostgreSQL and Flyway foundations are implemented and verified by CI in
+  Sprint 0 Workstream 2.
+- Object storage, Solr, outbox/indexing worker, and remaining local infrastructure are not implemented.
 - Identity, capability, audit, AI, rights, localization, and MTI boundary interfaces exist;
   their functional contracts and adapters are not implemented.
 - Architecture and software-design documents remain incomplete as listed in the Sprint 0 register.
@@ -52,4 +52,5 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 
 ## Next delivery slice
 
-Implement modular-boundary enforcement, PostgreSQL/Flyway, asset metadata, Solr local infrastructure, and the reliable indexing outbox. Record build and test evidence with the same change.
+Verify the PostgreSQL/Flyway foundation, then implement asset metadata and the
+object-storage abstraction.
