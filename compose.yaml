@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${FILMINEX_DB_NAME:-filminex}
+      POSTGRES_USER: ${FILMINEX_DB_USER:-filminex}
+      POSTGRES_PASSWORD: ${FILMINEX_DB_PASSWORD:-filminex-local}
+    ports:
+      - "${FILMINEX_DB_PORT:-5432}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${FILMINEX_DB_USER:-filminex} -d ${FILMINEX_DB_NAME:-filminex}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+    volumes:
+      - filminex-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  filminex-postgres-data:
