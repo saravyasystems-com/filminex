@@ -11,7 +11,7 @@ Documents are updated with the implementation they guide or verify. `Planned` me
 | A-05 | Security and Tenancy Architecture | Architecture | In progress | Authentication seam, workspace isolation, authorization |
 | A-06 | AI Provider Architecture | Architecture | Implemented foundation | AI Engine port, Grok adapter, provider-neutral contracts |
 | A-07 | Logging and Observability Architecture | Architecture | In progress | Audit events, operational telemetry, correlation |
-| A-08 | Rights Provider Architecture | Architecture | In progress | Local provider and deferred FTRP integration |
+| A-08 | Rights Provider Architecture | Architecture | Implemented foundation | Local provider and deferred FTRP integration |
 | A-09 | Localization Architecture | Architecture | In progress | Subtitle, dubbing, transcript, voice and export boundaries |
 | A-10 | Media Transparency Architecture | Architecture | In progress | MTI evaluation and export disclosure boundary |
 | A-11 | Deployment Architecture | Architecture | Planned | Environments, runtime services, configuration |
@@ -22,7 +22,7 @@ Documents are updated with the implementation they guide or verify. `Planned` me
 | D-04 | Logging and Audit Design | Software design | Implemented | Event schema, append flow, retention and redaction seams |
 | D-05 | AI Engine Design | Software design | Implemented foundation | Task contract, adapter SPI, normalized results |
 | D-06 | Search and Indexing Design | Software design | Planned | Projection schema, outbox consumer, retries and rebuild |
-| D-07 | Rights Provider Design | Software design | Planned | Request/decision contract and local adapter |
+| D-07 | Rights Provider Design | Software design | Implemented foundation | Request/decision contract and local adapter |
 | D-08 | Localization Design | Software design | Planned | Tracks, cues, dub lines, locale and voice-profile contracts |
 | D-09 | MTI Integration Design | Software design | Planned | Applicability decision and image/video/audio disclosure output |
 | D-10 | API Conventions | Software design | Planned | Versioning, errors, pagination, idempotency |
