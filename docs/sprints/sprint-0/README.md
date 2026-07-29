@@ -88,7 +88,8 @@ Sprint 0 establishes foundations. It does not implement filmmaking feature depth
 | 3/14 — Object Storage Abstraction | Complete | Vendor-neutral storage port, local filesystem adapter, checksum and traversal safeguards, lifecycle test, [storage design](../../architecture/object-storage.md), and green CI in PR #3 |
 | 4/14 — Solr Infrastructure | Complete | Solr Compose/CI service, workspace-scoped search port, health indicator, lifecycle test, [Solr design](../../architecture/solr-infrastructure.md), and green CI in PR #4 |
 | 5/14 — Event and Outbox Foundation | Complete | Transactional event publisher, PostgreSQL outbox, retrying dispatcher, search handlers, integration tests, [event/outbox design](../../architecture/event-outbox.md), and green CI in PR #5 |
-| 6/14 — Workspace and Identity Foundation | Implemented; CI verification pending | Provider-neutral users, workspace memberships, role administration, last-admin protection, durable identity events, integration tests, and [identity design](../../architecture/workspace-and-identity.md) |
+| 6/14 — Workspace and Identity Foundation | Complete | Provider-neutral users, workspace memberships, role administration, last-admin protection, durable identity events, integration tests, [identity design](../../architecture/workspace-and-identity.md), and green CI in PR #6 |
+| 7/14 — Logging and Audit Foundation | Implemented; CI verification pending | Append-only workspace audit history, actor/action/subject/outcome evidence, correlation and causation, sensitive-detail rejection, filtered queries, integration tests, and [audit design](../../architecture/logging-and-audit.md) |
 
 ## Exit criteria
 
