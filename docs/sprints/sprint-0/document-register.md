@@ -17,9 +17,9 @@ Documents are updated with the implementation they guide or verify. `Planned` me
 | A-11 | Deployment Architecture | Architecture | Planned | Environments, runtime services, configuration |
 | A-12 | Frontend Architecture | Architecture | In progress | React/TypeScript/Vite workspace boundary and API integration |
 | D-01 | Repository and Package Design | Software design | In progress | Source layout, package ownership, dependency direction |
-| D-02 | Workspace and Identity Design | Software design | Planned | Entities, services, authorization ports |
+| D-02 | Workspace and Identity Design | Software design | Implemented | Entities, services, authorization ports |
 | D-03 | Capability Engine Design | Software design | Planned | Evaluation inputs, decisions, API |
-| D-04 | Logging and Audit Design | Software design | Planned | Event schema, append flow, retention and redaction seams |
+| D-04 | Logging and Audit Design | Software design | Implemented | Event schema, append flow, retention and redaction seams |
 | D-05 | AI Engine Design | Software design | Planned | Task contract, adapter SPI, normalized results |
 | D-06 | Search and Indexing Design | Software design | Planned | Projection schema, outbox consumer, retries and rebuild |
 | D-07 | Rights Provider Design | Software design | Planned | Request/decision contract and local adapter |

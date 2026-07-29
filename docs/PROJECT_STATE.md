@@ -16,6 +16,7 @@
 - Workstream 3 object-storage abstraction, verified by CI and merged through PR #3
 - Workstream 4 Solr infrastructure, verified by CI and merged through PR #4
 - Workstream 5 event and outbox foundation, verified by CI and merged through PR #5
+- Workstream 6 workspace and identity foundation, verified by CI and merged through PR #6
 
 ## Frozen architectural baseline
 
@@ -40,9 +41,9 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 ## Current gaps
 
 - The React/TypeScript/Vite frontend has not yet been scaffolded or verified.
-- Workspace and identity persistence, membership roles, and authorization seam are implemented
-  by Sprint 0 Workstream 6; CI evidence is pending.
-- Capability, business audit, AI, rights, localization, and MTI boundary interfaces exist;
+- Workspace and identity persistence, membership roles, and authorization seam are operational.
+- The business audit foundation is implemented by Sprint 0 Workstream 7; CI evidence is pending.
+- Capability, AI, rights, localization, and MTI boundary interfaces exist;
   their functional contracts and adapters are not implemented.
 - Architecture and software-design documents remain incomplete as listed in the Sprint 0 register.
 - MTI governance and IP workstream documents are not yet written.
@@ -55,4 +56,4 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 
 ## Next delivery slice
 
-Verify the workspace and identity foundation, then begin the logging and audit foundation.
+Verify the logging and audit foundation, then begin the capability and entitlement foundation.
