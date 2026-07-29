@@ -51,8 +51,9 @@ jobs:
           java-version: "25"
       - uses: gradle/actions/setup-gradle@v5
       - name: Initialize Solr core
-        run: >-
-          curl --fail --silent
-          "http://localhost:8983/solr/admin/cores?action=CREATE&name=filminex&configSet=_default"
+        run: |
+          solr_container_id="$(docker ps --filter ancestor=solr:9.8.1 --quiet)"
+          test -n "$solr_container_id"
+          docker exec "$solr_container_id" solr create_core -c filminex
       - name: Verify
         run: ./gradlew test
