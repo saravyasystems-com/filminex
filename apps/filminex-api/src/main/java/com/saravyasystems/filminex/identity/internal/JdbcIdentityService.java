@@ -18,7 +18,7 @@ import java.util.UUID;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.transaction.annotation.Transactional;
 
-final class JdbcIdentityService implements IdentityService {
+class JdbcIdentityService implements IdentityService {
 
     private final JdbcClient jdbcClient;
     private final DomainEventPublisher eventPublisher;
