@@ -1,8 +1,5 @@
 package com.saravyasystems.filminex.search.internal;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.saravyasystems.filminex.search.api.MediaSearch;
 import com.saravyasystems.filminex.search.api.SearchDocument;
 import com.saravyasystems.filminex.search.api.SearchHit;
@@ -19,6 +16,9 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
 
 final class SolrMediaSearch implements MediaSearch {
 
@@ -90,7 +90,7 @@ final class SolrMediaSearch implements MediaSearch {
                     .POST(HttpRequest.BodyPublishers.ofString(objectMapper.writeValueAsString(body)))
                     .build();
             send(request);
-        } catch (JsonProcessingException exception) {
+        } catch (JacksonException exception) {
             throw new SearchUnavailableException("Could not serialize the search projection", exception);
         }
     }
