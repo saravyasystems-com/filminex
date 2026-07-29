@@ -29,3 +29,8 @@ info:
   application:
     name: Filminex API
     description: The backend foundation for the Filmmaking Workspace
+
+filminex:
+  storage:
+    filesystem:
+      root: ${FILMINEX_STORAGE_ROOT:./var/filminex/objects}
