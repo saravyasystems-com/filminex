@@ -85,6 +85,7 @@ Sprint 0 establishes foundations. It does not implement filmmaking feature depth
 |---|---|---|
 | 1/14 — Modular Monolith Foundation | Complete | Public module APIs, hidden implementation package, architecture tests, [dependency graph](../../architecture/module-dependencies.md), and green CI in PR #1 |
 | 2/14 — PostgreSQL and Flyway Foundation | Complete | PostgreSQL Compose service, Flyway V1 migration, database health integration, migration test, [database design](../../architecture/postgresql-and-migrations.md), and green CI in PR #2 |
+| 3/14 — Object Storage Abstraction | Verification pending | Vendor-neutral storage port, local filesystem adapter, checksum and traversal safeguards, lifecycle test, and [storage design](../../architecture/object-storage.md) |
 
 ## Exit criteria
 
