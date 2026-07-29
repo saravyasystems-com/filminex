@@ -87,7 +87,7 @@ class AuditIntegrationTests {
         append(second, "asset.created", subjectId, AuditOutcome.SUCCEEDED);
 
         AuditQuery deniedForSubject = new AuditQuery(
-                first.workspace().id(),
+                first.workspaceId(),
                 null,
                 null,
                 null,
@@ -103,7 +103,7 @@ class AuditIntegrationTests {
                 .singleElement()
                 .extracting(AuditRecord::action)
                 .isEqualTo("asset.deleted");
-        assertThat(audit.query(AuditQuery.recent(first.workspace().id(), 20))).hasSize(2);
+        assertThat(audit.query(AuditQuery.recent(first.workspaceId(), 20))).hasSize(2);
     }
 
     @Test
