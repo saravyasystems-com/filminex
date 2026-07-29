@@ -21,6 +21,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.Clock;
 import java.time.Instant;
+import java.time.ZoneOffset;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -66,7 +67,7 @@ class LocalTalentRightsProvider implements TalentRightsProvider {
                 .param("talentId", request.talentId())
                 .param("use", request.use().name())
                 .param("territory", request.territory().toUpperCase())
-                .param("intendedAt", request.intendedAt())
+                .param("intendedAt", request.intendedAt().atOffset(ZoneOffset.UTC))
                 .query(LocalTalentRightsProvider::mapGrant)
                 .optional();
 
@@ -103,8 +104,8 @@ class LocalTalentRightsProvider implements TalentRightsProvider {
                 .param("talentId", request.talentId())
                 .param("uses", joinUses(request.uses()))
                 .param("territories", joinTerritories(request.territories()))
-                .param("validFrom", request.validFrom())
-                .param("validUntil", request.validUntil())
+                .param("validFrom", request.validFrom().atOffset(ZoneOffset.UTC))
+                .param("validUntil", request.validUntil().atOffset(ZoneOffset.UTC))
                 .param("evidence", request.evidenceReference())
                 .param("changedBy", request.actorUserId())
                 .query(LocalTalentRightsProvider::mapGrant)
