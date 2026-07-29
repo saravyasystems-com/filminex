@@ -9,9 +9,6 @@ import com.saravyasystems.filminex.audit.api.AuditOutcome;
 import com.saravyasystems.filminex.audit.api.AuditQuery;
 import com.saravyasystems.filminex.audit.api.AuditRecord;
 import com.saravyasystems.filminex.audit.api.AuditService;
-import com.saravyasystems.filminex.identity.api.IdentityService;
-import com.saravyasystems.filminex.identity.api.UserIdentity;
-import com.saravyasystems.filminex.identity.api.Workspace;
 import java.time.Instant;
 import java.util.Map;
 import java.util.UUID;
@@ -31,9 +28,6 @@ class AuditIntegrationTests {
 
     @Autowired
     private AuditService audit;
-
-    @Autowired
-    private IdentityService identities;
 
     @Autowired
     private JdbcClient jdbcClient;
@@ -60,9 +54,9 @@ class AuditIntegrationTests {
         Instant occurredAt = Instant.parse("2026-07-30T10:15:30Z");
 
         AuditRecord record = audit.append(new AuditEvent(
-                context.workspace().id(),
+                context.workspaceId(),
                 AuditActorType.USER,
-                context.user().id().toString(),
+                context.userId().toString(),
                 "identity.member-role.changed",
                 "workspace-membership",
                 UUID.randomUUID().toString(),
@@ -72,7 +66,7 @@ class AuditIntegrationTests {
                 null,
                 Map.of("fromRole", "VIEWER", "toRole", "EDITOR")));
 
-        assertThat(audit.find(context.workspace().id(), record.id()))
+        assertThat(audit.find(context.workspaceId(), record.id()))
                 .get()
                 .satisfies(found -> {
                     assertThat(found.correlationId()).isEqualTo(correlationId);
@@ -139,9 +133,9 @@ class AuditIntegrationTests {
         Context context = context("redaction");
 
         assertThatThrownBy(() -> audit.append(new AuditEvent(
-                        context.workspace().id(),
+                        context.workspaceId(),
                         AuditActorType.USER,
-                        context.user().id().toString(),
+                        context.userId().toString(),
                         "ai.requested",
                         "prompt",
                         "prompt-1",
@@ -152,7 +146,7 @@ class AuditIntegrationTests {
                         Map.of("authorizationToken", "must-not-be-stored"))))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("sensitive key");
-        assertThat(audit.query(AuditQuery.recent(context.workspace().id(), 10))).isEmpty();
+        assertThat(audit.query(AuditQuery.recent(context.workspaceId(), 10))).isEmpty();
     }
 
     @Test
@@ -160,7 +154,7 @@ class AuditIntegrationTests {
         Context context = context("validation");
 
         assertThatThrownBy(() -> audit.append(new AuditEvent(
-                        context.workspace().id(),
+                        context.workspaceId(),
                         AuditActorType.USER,
                         null,
                         "project.created",
@@ -173,11 +167,11 @@ class AuditIntegrationTests {
                         Map.of())))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("actorId");
-        assertThatThrownBy(() -> audit.query(AuditQuery.recent(context.workspace().id(), 501)))
+        assertThatThrownBy(() -> audit.query(AuditQuery.recent(context.workspaceId(), 501)))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("limit");
         assertThatThrownBy(() -> audit.query(new AuditQuery(
-                        context.workspace().id(),
+                        context.workspaceId(),
                         null,
                         null,
                         null,
@@ -195,9 +189,9 @@ class AuditIntegrationTests {
     private AuditRecord append(
             Context context, String action, UUID subjectId, AuditOutcome outcome) {
         return audit.append(new AuditEvent(
-                context.workspace().id(),
+                context.workspaceId(),
                 AuditActorType.USER,
-                context.user().id().toString(),
+                context.userId().toString(),
                 action,
                 "asset",
                 subjectId.toString(),
@@ -209,10 +203,29 @@ class AuditIntegrationTests {
     }
 
     private Context context(String name) {
-        UserIdentity user = identities.registerUser(name + "@filminex.test", name);
-        Workspace workspace = identities.createWorkspace(user.id(), name + " workspace");
-        return new Context(user, workspace);
+        UUID userId = UUID.randomUUID();
+        UUID workspaceId = UUID.randomUUID();
+        jdbcClient.sql("""
+                        insert into filminex.filminex_user (id, email, display_name)
+                        values (:id, :email, :displayName)
+                        """)
+                .param("id", userId)
+                .param("email", name + "@filminex.test")
+                .param("displayName", name)
+                .update();
+        jdbcClient.sql("insert into filminex.workspace (id, name) values (:id, :name)")
+                .param("id", workspaceId)
+                .param("name", name + " workspace")
+                .update();
+        jdbcClient.sql("""
+                        insert into filminex.workspace_membership (workspace_id, user_id, role)
+                        values (:workspaceId, :userId, 'ADMIN')
+                        """)
+                .param("workspaceId", workspaceId)
+                .param("userId", userId)
+                .update();
+        return new Context(userId, workspaceId);
     }
 
-    private record Context(UserIdentity user, Workspace workspace) {}
+    private record Context(UUID userId, UUID workspaceId) {}
 }
