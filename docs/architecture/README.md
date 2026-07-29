@@ -22,6 +22,7 @@
 - [Capabilities and entitlements foundation](capabilities-and-entitlements.md)
 - [AI Engine foundation](ai-engine.md)
 - [Rights provider foundation](rights-provider.md)
+- [Localization foundation](localization-foundation.md)
 - **ADRs:** why consequential technical choices were made
 - **Sprint artifacts:** delivery scope, sequencing, evidence, and exit review
 - **Code, API definitions, migrations, and tests:** executable truth

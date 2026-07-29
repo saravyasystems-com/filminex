@@ -46,10 +46,9 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 - The React/TypeScript/Vite frontend has not yet been scaffolded or verified.
 - Workspace and identity persistence, membership roles, and authorization seam are operational.
 - The AI Engine foundation is verified by CI and merged through Sprint 0 Workstream 9.
-- The rights-provider foundation is implemented by Sprint 0 Workstream 10; CI evidence
-  is pending.
-- Localization and MTI boundary interfaces exist; their functional contracts and adapters
-  are not implemented.
+- The rights-provider foundation is verified by CI and merged through Sprint 0 Workstream 10.
+- The localization foundation is implemented by Sprint 0 Workstream 11; CI evidence is pending.
+- The MTI boundary interface exists; its functional contract and adapter are not implemented.
 - Architecture and software-design documents remain incomplete as listed in the Sprint 0 register.
 - MTI governance and IP workstream documents are not yet written.
 
@@ -61,4 +60,4 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 
 ## Next delivery slice
 
-Verify the rights-provider foundation, then begin the localization foundation.
+Verify the localization foundation, then begin the MTI foundation.
