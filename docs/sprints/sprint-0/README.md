@@ -79,6 +79,12 @@ Sprint 0 establishes foundations. It does not implement filmmaking feature depth
 10. Verify CI, health, migrations, architecture rules, and operational documentation.
 11. Run the Sprint 0 exit review.
 
+## Workstream status
+
+| Workstream | Status | Evidence |
+|---|---|---|
+| 1/14 — Modular Monolith Foundation | Implemented; CI verification pending | Public module APIs, hidden implementation package, architecture tests, and [dependency graph](../../architecture/module-dependencies.md) |
+
 ## Exit criteria
 
 - Application builds and starts locally.

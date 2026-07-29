@@ -36,9 +36,11 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 
 - Successful Java 25 CI/build execution has not yet been recorded as Sprint evidence.
 - The React/TypeScript/Vite frontend has not yet been scaffolded or verified.
-- Platform module boundaries and architecture tests are not implemented.
+- Platform module boundaries, public API packages, and architecture tests are implemented
+  locally by Sprint 0 Workstream 1; Java 25 CI evidence is pending.
 - PostgreSQL, Flyway, object storage, Solr, outbox/indexing worker, and local infrastructure are not implemented.
-- Identity, capability, audit, AI, rights, localization, and MTI contracts are not implemented.
+- Identity, capability, audit, AI, rights, localization, and MTI boundary interfaces exist;
+  their functional contracts and adapters are not implemented.
 - Architecture and software-design documents remain incomplete as listed in the Sprint 0 register.
 - MTI governance and IP workstream documents are not yet written.
 
