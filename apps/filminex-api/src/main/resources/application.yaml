@@ -31,6 +31,10 @@ info:
     description: The backend foundation for the Filmmaking Workspace
 
 filminex:
+  ai:
+    provider: ${FILMINEX_AI_PROVIDER:local}
+    model: ${FILMINEX_AI_MODEL:grok-default}
+    grok-api-key: ${FILMINEX_GROK_API_KEY:}
   events:
     outbox:
       batch-size: ${FILMINEX_OUTBOX_BATCH_SIZE:50}

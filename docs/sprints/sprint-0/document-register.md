@@ -9,7 +9,7 @@ Documents are updated with the implementation they guide or verify. `Planned` me
 | A-03 | Data and Asset Architecture | Architecture | In progress | PostgreSQL ownership, migrations, object-storage boundaries |
 | A-04 | Search and Indexing Architecture | Architecture | In progress | Solr projection, indexing worker, replay and rebuild |
 | A-05 | Security and Tenancy Architecture | Architecture | In progress | Authentication seam, workspace isolation, authorization |
-| A-06 | AI Provider Architecture | Architecture | In progress | AI Engine port, Grok adapter, provider-neutral contracts |
+| A-06 | AI Provider Architecture | Architecture | Implemented foundation | AI Engine port, Grok adapter, provider-neutral contracts |
 | A-07 | Logging and Observability Architecture | Architecture | In progress | Audit events, operational telemetry, correlation |
 | A-08 | Rights Provider Architecture | Architecture | In progress | Local provider and deferred FTRP integration |
 | A-09 | Localization Architecture | Architecture | In progress | Subtitle, dubbing, transcript, voice and export boundaries |
@@ -20,7 +20,7 @@ Documents are updated with the implementation they guide or verify. `Planned` me
 | D-02 | Workspace and Identity Design | Software design | Implemented | Entities, services, authorization ports |
 | D-03 | Capability Engine Design | Software design | Planned | Evaluation inputs, decisions, API |
 | D-04 | Logging and Audit Design | Software design | Implemented | Event schema, append flow, retention and redaction seams |
-| D-05 | AI Engine Design | Software design | Planned | Task contract, adapter SPI, normalized results |
+| D-05 | AI Engine Design | Software design | Implemented foundation | Task contract, adapter SPI, normalized results |
 | D-06 | Search and Indexing Design | Software design | Planned | Projection schema, outbox consumer, retries and rebuild |
 | D-07 | Rights Provider Design | Software design | Planned | Request/decision contract and local adapter |
 | D-08 | Localization Design | Software design | Planned | Tracks, cues, dub lines, locale and voice-profile contracts |
