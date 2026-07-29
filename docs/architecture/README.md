@@ -19,6 +19,7 @@
 - [Event and outbox foundation](event-outbox.md)
 - [Workspace and identity foundation](workspace-and-identity.md)
 - [Logging and audit foundation](logging-and-audit.md)
+- [Capabilities and entitlements foundation](capabilities-and-entitlements.md)
 - **ADRs:** why consequential technical choices were made
 - **Sprint artifacts:** delivery scope, sequencing, evidence, and exit review
 - **Code, API definitions, migrations, and tests:** executable truth

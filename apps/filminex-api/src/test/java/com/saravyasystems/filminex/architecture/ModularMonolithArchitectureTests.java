@@ -41,7 +41,7 @@ class ModularMonolithArchitectureTests {
                     Map.entry("ai", Set.of("assets", "audit", "capabilities")),
                     Map.entry("assets", Set.of("audit")),
                     Map.entry("audit", Set.of()),
-                    Map.entry("capabilities", Set.of("identity")),
+                    Map.entry("capabilities", Set.of("audit", "identity")),
                     Map.entry("characters", Set.of("assets", "audit")),
                     Map.entry("collaboration", Set.of("audit", "identity", "projects")),
                     Map.entry("identity", Set.of("audit")),

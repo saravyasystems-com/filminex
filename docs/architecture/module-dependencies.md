@@ -62,7 +62,7 @@ An omitted edge is forbidden. Transitive access does not grant direct access.
 | `wardrobe` | `assets`, `audit` |
 | `collaboration` | `projects`, `identity`, `audit` |
 | `knowledge` | `characters`, `locations`, `wardrobe`, `audit` |
-| `capabilities` | `identity` |
+| `capabilities` | `identity`, `audit` |
 | `audit` | none |
 | `ai` | `capabilities`, `assets`, `audit` |
 | `assets` | `audit` |

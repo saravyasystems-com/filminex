@@ -89,7 +89,8 @@ Sprint 0 establishes foundations. It does not implement filmmaking feature depth
 | 4/14 — Solr Infrastructure | Complete | Solr Compose/CI service, workspace-scoped search port, health indicator, lifecycle test, [Solr design](../../architecture/solr-infrastructure.md), and green CI in PR #4 |
 | 5/14 — Event and Outbox Foundation | Complete | Transactional event publisher, PostgreSQL outbox, retrying dispatcher, search handlers, integration tests, [event/outbox design](../../architecture/event-outbox.md), and green CI in PR #5 |
 | 6/14 — Workspace and Identity Foundation | Complete | Provider-neutral users, workspace memberships, role administration, last-admin protection, durable identity events, integration tests, [identity design](../../architecture/workspace-and-identity.md), and green CI in PR #6 |
-| 7/14 — Logging and Audit Foundation | Implemented; CI verification pending | Append-only workspace audit history, actor/action/subject/outcome evidence, correlation and causation, sensitive-detail rejection, filtered queries, integration tests, and [audit design](../../architecture/logging-and-audit.md) |
+| 7/14 — Logging and Audit Foundation | Complete | Append-only workspace audit history, actor/action/subject/outcome evidence, correlation and causation, sensitive-detail rejection, filtered queries, integration tests, [audit design](../../architecture/logging-and-audit.md), and green CI in PR #7 |
+| 8/14 — Capabilities and Entitlements Foundation | Implemented; CI verification pending | Role-derived core access, provider-neutral optional entitlements, production-mode and provider decisions, workspace-policy denial, audited administration, integration tests, and [capability design](../../architecture/capabilities-and-entitlements.md) |
 
 ## Exit criteria
 
