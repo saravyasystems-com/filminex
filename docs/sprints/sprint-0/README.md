@@ -92,7 +92,8 @@ Sprint 0 establishes foundations. It does not implement filmmaking feature depth
 | 7/14 — Logging and Audit Foundation | Complete | Append-only workspace audit history, actor/action/subject/outcome evidence, correlation and causation, sensitive-detail rejection, filtered queries, integration tests, [audit design](../../architecture/logging-and-audit.md), and green CI in PR #7 |
 | 8/14 — Capabilities and Entitlements Foundation | Complete | Role-derived core access, provider-neutral optional entitlements, production-mode and provider decisions, workspace-policy denial, audited administration, integration tests, [capability design](../../architecture/capabilities-and-entitlements.md), and green CI in PR #8 |
 | 9/14 — Provider-Agnostic AI Engine Foundation | Complete | Provider-neutral tasks and normalized results, Capability Engine enforcement, durable request audit, deterministic local adapter, isolated Grok adapter boundary, tests, [AI Engine design](../../architecture/ai-engine.md), and green CI in PR #9 |
-| 10/14 — Rights Provider Foundation | Implemented; CI verification pending | Provider-neutral rights requests and explainable decisions, admin-managed local grants, workspace isolation, durable audit evidence, Flyway V6, integration tests, and [rights-provider design](../../architecture/rights-provider.md) |
+| 10/14 — Rights Provider Foundation | Complete | Provider-neutral rights requests and explainable decisions, admin-managed local grants, workspace isolation, durable audit evidence, Flyway V6, integration tests, [rights-provider design](../../architecture/rights-provider.md), and green CI in PR #10 |
+| 11/14 — Localization Foundation | Implemented; CI verification pending | Locale-aware subtitle, caption, transcript, and dub tracks; timed cues; voice profiles; reviewed searchable text; Flyway V7; integration tests; and [localization design](../../architecture/localization-foundation.md) |
 
 ## Exit criteria
 
