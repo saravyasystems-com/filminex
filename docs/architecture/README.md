@@ -13,6 +13,8 @@
 ## Implemented designs
 
 - [Modular monolith dependency design](module-dependencies.md)
+- [PostgreSQL and migrations](postgresql-and-migrations.md)
+- [Object storage](object-storage.md)
 - **ADRs:** why consequential technical choices were made
 - **Sprint artifacts:** delivery scope, sequencing, evidence, and exit review
 - **Code, API definitions, migrations, and tests:** executable truth
