@@ -34,3 +34,8 @@ filminex:
   storage:
     filesystem:
       root: ${FILMINEX_STORAGE_ROOT:./var/filminex/objects}
+  search:
+    solr:
+      url: ${FILMINEX_SOLR_URL:http://localhost:8983/solr/filminex}
+      connect-timeout: ${FILMINEX_SOLR_CONNECT_TIMEOUT:2s}
+      read-timeout: ${FILMINEX_SOLR_READ_TIMEOUT:5s}

@@ -25,12 +25,24 @@ jobs:
           --health-interval 5s
           --health-timeout 5s
           --health-retries 10
+      solr:
+        image: solr:9.8.1
+        env:
+          SOLR_HEAP: 512m
+        ports:
+          - 8983:8983
+        options: >-
+          --health-cmd "curl --fail --silent http://localhost:8983/solr/admin/info/system"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
     env:
       FILMINEX_DB_HOST: localhost
       FILMINEX_DB_PORT: 5432
       FILMINEX_DB_NAME: filminex
       FILMINEX_DB_USER: filminex
       FILMINEX_DB_PASSWORD: filminex-ci
+      FILMINEX_SOLR_URL: http://localhost:8983/solr/filminex
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v5
@@ -38,5 +50,10 @@ jobs:
           distribution: temurin
           java-version: "25"
       - uses: gradle/actions/setup-gradle@v5
+      - name: Initialize Solr core
+        run: |
+          solr_container_id="$(docker ps --filter ancestor=solr:9.8.1 --quiet)"
+          test -n "$solr_container_id"
+          docker exec "$solr_container_id" solr create_core -c filminex
       - name: Verify
         run: ./gradlew test
