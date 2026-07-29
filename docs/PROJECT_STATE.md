@@ -20,6 +20,8 @@
 - Workstream 7 logging and audit foundation, verified by CI and merged through PR #7
 - Workstream 8 capabilities and entitlements foundation, verified by CI and merged through PR #8
 - Workstream 9 provider-agnostic AI Engine foundation, verified by CI and merged through PR #9
+- Workstream 10 rights-provider foundation, verified by CI and merged through PR #10
+- Workstream 11 localization foundation, verified by CI and merged through PR #11
 
 ## Frozen architectural baseline
 
@@ -47,8 +49,7 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 - Workspace and identity persistence, membership roles, and authorization seam are operational.
 - The AI Engine foundation is verified by CI and merged through Sprint 0 Workstream 9.
 - The rights-provider foundation is verified by CI and merged through Sprint 0 Workstream 10.
-- The localization foundation is implemented by Sprint 0 Workstream 11; CI evidence is pending.
-- The MTI boundary interface exists; its functional contract and adapter are not implemented.
+- The MTI foundation is implemented by Sprint 0 Workstream 12; CI evidence is pending.
 - Architecture and software-design documents remain incomplete as listed in the Sprint 0 register.
 - MTI governance and IP workstream documents are not yet written.
 
@@ -60,4 +61,4 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 
 ## Next delivery slice
 
-Verify the localization foundation, then begin the MTI foundation.
+Verify the MTI foundation, then begin the frontend foundation.

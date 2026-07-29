@@ -23,6 +23,7 @@
 - [AI Engine foundation](ai-engine.md)
 - [Rights provider foundation](rights-provider.md)
 - [Localization foundation](localization-foundation.md)
+- [Media transparency foundation](media-transparency.md)
 - **ADRs:** why consequential technical choices were made
 - **Sprint artifacts:** delivery scope, sequencing, evidence, and exit review
 - **Code, API definitions, migrations, and tests:** executable truth

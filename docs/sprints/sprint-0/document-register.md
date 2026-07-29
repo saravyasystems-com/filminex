@@ -13,7 +13,7 @@ Documents are updated with the implementation they guide or verify. `Planned` me
 | A-07 | Logging and Observability Architecture | Architecture | In progress | Audit events, operational telemetry, correlation |
 | A-08 | Rights Provider Architecture | Architecture | Implemented foundation | Local provider and deferred FTRP integration |
 | A-09 | Localization Architecture | Architecture | Implemented foundation | Subtitle, dubbing, transcript, voice and export boundaries |
-| A-10 | Media Transparency Architecture | Architecture | In progress | MTI evaluation and export disclosure boundary |
+| A-10 | Media Transparency Architecture | Architecture | Implemented foundation | MTI evaluation and export disclosure boundary |
 | A-11 | Deployment Architecture | Architecture | Planned | Environments, runtime services, configuration |
 | A-12 | Frontend Architecture | Architecture | In progress | React/TypeScript/Vite workspace boundary and API integration |
 | D-01 | Repository and Package Design | Software design | In progress | Source layout, package ownership, dependency direction |
@@ -24,7 +24,7 @@ Documents are updated with the implementation they guide or verify. `Planned` me
 | D-06 | Search and Indexing Design | Software design | Planned | Projection schema, outbox consumer, retries and rebuild |
 | D-07 | Rights Provider Design | Software design | Implemented foundation | Request/decision contract and local adapter |
 | D-08 | Localization Design | Software design | Implemented foundation | Tracks, cues, dub lines, locale and voice-profile contracts |
-| D-09 | MTI Integration Design | Software design | Planned | Applicability decision and image/video/audio disclosure output |
+| D-09 | MTI Integration Design | Software design | Implemented foundation | Applicability decision and image/video/audio disclosure output |
 | D-10 | API Conventions | Software design | Planned | Versioning, errors, pagination, idempotency |
 | D-11 | Database Schema | Software design | Planned | Tables, keys, indexes, migration ownership |
 | D-12 | Test Strategy | Software design | Planned | Unit, integration, architecture, contract, migration tests |

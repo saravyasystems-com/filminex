@@ -75,7 +75,7 @@ class ModularMonolithArchitectureTests {
                                     "locations",
                                     "projects",
                                     "wardrobe")),
-                    Map.entry("transparency", Set.of("audit", "rights")),
+                    Map.entry("transparency", Set.of("audit", "identity", "rights")),
                     Map.entry("wardrobe", Set.of("assets", "audit")));
 
     private final JavaClasses productionClasses =
