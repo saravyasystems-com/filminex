@@ -84,7 +84,7 @@ Sprint 0 establishes foundations. It does not implement filmmaking feature depth
 | Workstream | Status | Evidence |
 |---|---|---|
 | 1/14 — Modular Monolith Foundation | Complete | Public module APIs, hidden implementation package, architecture tests, [dependency graph](../../architecture/module-dependencies.md), and green CI in PR #1 |
-| 2/14 — PostgreSQL and Flyway Foundation | Implemented; CI verification pending | PostgreSQL Compose service, Flyway V1 migration, database health integration, migration test, and [database design](../../architecture/postgresql-and-migrations.md) |
+| 2/14 — PostgreSQL and Flyway Foundation | Complete | PostgreSQL Compose service, Flyway V1 migration, database health integration, migration test, [database design](../../architecture/postgresql-and-migrations.md), and green CI in PR #2 |
 
 ## Exit criteria
 
