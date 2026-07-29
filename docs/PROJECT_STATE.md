@@ -1,6 +1,6 @@
 # Filminex Project State
 
-**Updated:** 29 July 2026
+**Updated:** 30 July 2026
 **Delivery phase:** Sprint 0 — Platform Foundation  
 **Genesis:** Frozen and closed
 
@@ -15,6 +15,7 @@
 - Workstream 2 PostgreSQL and Flyway foundation, verified by CI and merged through PR #2
 - Workstream 3 object-storage abstraction, verified by CI and merged through PR #3
 - Workstream 4 Solr infrastructure, verified by CI and merged through PR #4
+- Workstream 5 event and outbox foundation, verified by CI and merged through PR #5
 
 ## Frozen architectural baseline
 
@@ -39,8 +40,9 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 ## Current gaps
 
 - The React/TypeScript/Vite frontend has not yet been scaffolded or verified.
-- Event/outbox implementation and CI verification are in progress in Sprint 0 Workstream 5.
-- Identity, capability, audit, AI, rights, localization, and MTI boundary interfaces exist;
+- Workspace and identity persistence, membership roles, and authorization seam are implemented
+  by Sprint 0 Workstream 6; CI evidence is pending.
+- Capability, business audit, AI, rights, localization, and MTI boundary interfaces exist;
   their functional contracts and adapters are not implemented.
 - Architecture and software-design documents remain incomplete as listed in the Sprint 0 register.
 - MTI governance and IP workstream documents are not yet written.
@@ -53,4 +55,4 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 
 ## Next delivery slice
 
-Verify the transactional outbox and event-driven indexing foundation.
+Verify the workspace and identity foundation, then begin the logging and audit foundation.

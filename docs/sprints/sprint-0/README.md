@@ -87,7 +87,8 @@ Sprint 0 establishes foundations. It does not implement filmmaking feature depth
 | 2/14 — PostgreSQL and Flyway Foundation | Complete | PostgreSQL Compose service, Flyway V1 migration, database health integration, migration test, [database design](../../architecture/postgresql-and-migrations.md), and green CI in PR #2 |
 | 3/14 — Object Storage Abstraction | Complete | Vendor-neutral storage port, local filesystem adapter, checksum and traversal safeguards, lifecycle test, [storage design](../../architecture/object-storage.md), and green CI in PR #3 |
 | 4/14 — Solr Infrastructure | Complete | Solr Compose/CI service, workspace-scoped search port, health indicator, lifecycle test, [Solr design](../../architecture/solr-infrastructure.md), and green CI in PR #4 |
-| 5/14 — Event and Outbox Foundation | Verification pending | Transactional event publisher, PostgreSQL outbox, retrying dispatcher, search handlers, integration tests, and [event/outbox design](../../architecture/event-outbox.md) |
+| 5/14 — Event and Outbox Foundation | Complete | Transactional event publisher, PostgreSQL outbox, retrying dispatcher, search handlers, integration tests, [event/outbox design](../../architecture/event-outbox.md), and green CI in PR #5 |
+| 6/14 — Workspace and Identity Foundation | Implemented; CI verification pending | Provider-neutral users, workspace memberships, role administration, last-admin protection, durable identity events, integration tests, and [identity design](../../architecture/workspace-and-identity.md) |
 
 ## Exit criteria
 
