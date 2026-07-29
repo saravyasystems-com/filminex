@@ -18,6 +18,7 @@
 - Workstream 5 event and outbox foundation, verified by CI and merged through PR #5
 - Workstream 6 workspace and identity foundation, verified by CI and merged through PR #6
 - Workstream 7 logging and audit foundation, verified by CI and merged through PR #7
+- Workstream 8 capabilities and entitlements foundation, verified by CI and merged through PR #8
 
 ## Frozen architectural baseline
 
@@ -43,10 +44,9 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 
 - The React/TypeScript/Vite frontend has not yet been scaffolded or verified.
 - Workspace and identity persistence, membership roles, and authorization seam are operational.
-- The capability and entitlement foundation is implemented by Sprint 0 Workstream 8;
-  CI evidence is pending.
-- AI, rights, localization, and MTI boundary interfaces exist; their functional contracts
-  and adapters are not implemented.
+- The AI Engine foundation is implemented by Sprint 0 Workstream 9; CI evidence is pending.
+- Rights, localization, and MTI boundary interfaces exist; their functional contracts and
+  adapters are not implemented.
 - Architecture and software-design documents remain incomplete as listed in the Sprint 0 register.
 - MTI governance and IP workstream documents are not yet written.
 
@@ -58,4 +58,4 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 
 ## Next delivery slice
 
-Verify the capability and entitlement foundation, then begin the next Sprint 0 workstream.
+Verify the AI Engine foundation, then begin the rights-provider foundation.

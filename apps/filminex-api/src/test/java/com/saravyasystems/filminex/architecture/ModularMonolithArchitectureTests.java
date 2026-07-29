@@ -106,6 +106,18 @@ class ModularMonolithArchitectureTests {
     }
 
     @Test
+    void businessModulesNeverDependOnAiProviderSpi() {
+        noClasses()
+                .that()
+                .resideOutsideOfPackage(BASE + ".ai..")
+                .should()
+                .dependOnClassesThat()
+                .resideInAPackage(BASE + ".ai.spi..")
+                .because("business modules must use the provider-neutral AiService")
+                .check(productionClasses);
+    }
+
+    @Test
     void crossModuleDependenciesUseOnlyApprovedPublicApis() {
         for (JavaClass origin : productionClasses) {
             String sourceModule = moduleOf(origin);
