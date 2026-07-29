@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.transaction.annotation.Transactional;
 
-final class LocalTalentRightsProvider implements TalentRightsProvider {
+class LocalTalentRightsProvider implements TalentRightsProvider {
 
     private final JdbcClient jdbc;
     private final IdentityService identities;
