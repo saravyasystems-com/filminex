@@ -15,6 +15,20 @@ services:
       start_period: 5s
     volumes:
       - filminex-postgres-data:/var/lib/postgresql/data
+  solr:
+    image: solr:9.8.1
+    command: ["solr-precreate", "filminex"]
+    ports:
+      - "${FILMINEX_SOLR_PORT:-8983}:8983"
+    healthcheck:
+      test: ["CMD-SHELL", "curl --fail --silent http://localhost:8983/solr/filminex/admin/ping >/dev/null"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 15s
+    volumes:
+      - filminex-solr-data:/var/solr
 
 volumes:
   filminex-postgres-data:
+  filminex-solr-data:
