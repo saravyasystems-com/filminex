@@ -2,6 +2,7 @@ package com.saravyasystems.filminex.audit.internal;
 
 import com.saravyasystems.filminex.audit.api.DomainEvent;
 import com.saravyasystems.filminex.audit.api.DomainEventPublisher;
+import java.time.ZoneOffset;
 import org.springframework.jdbc.core.simple.JdbcClient;
 
 final class JdbcDomainEventPublisher implements DomainEventPublisher {
@@ -29,7 +30,7 @@ final class JdbcDomainEventPublisher implements DomainEventPublisher {
                 .param("aggregateId", event.aggregateId())
                 .param("eventType", event.eventType())
                 .param("payload", event.payload())
-                .param("occurredAt", event.occurredAt())
+                .param("occurredAt", event.occurredAt().atOffset(ZoneOffset.UTC))
                 .update();
     }
 }
