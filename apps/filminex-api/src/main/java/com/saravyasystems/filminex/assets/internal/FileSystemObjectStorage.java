@@ -9,7 +9,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.security.DigestInputStream;
 import java.security.MessageDigest;
@@ -39,10 +38,7 @@ final class FileSystemObjectStorage implements ObjectStorage {
                         OutputStream destination = Files.newOutputStream(temporary)) {
                     hashingSource.transferTo(destination);
                 }
-                Files.move(
-                        temporary,
-                        target,
-                        StandardCopyOption.ATOMIC_MOVE);
+                Files.move(temporary, target);
                 return metadata(key, target, HexFormat.of().formatHex(digest.digest()));
             } finally {
                 Files.deleteIfExists(temporary);
