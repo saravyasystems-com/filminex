@@ -1,5 +1,6 @@
 package com.saravyasystems.filminex.search.internal;
 
+import com.saravyasystems.filminex.audit.api.DomainEventHandler;
 import com.saravyasystems.filminex.search.api.MediaSearch;
 import java.net.http.HttpClient;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -17,5 +18,11 @@ class SolrSearchConfiguration {
                 .connectTimeout(properties.connectTimeout())
                 .build();
         return new SolrMediaSearch(client, objectMapper, properties);
+    }
+
+    @Bean
+    DomainEventHandler searchProjectionEventHandler(
+            MediaSearch mediaSearch, ObjectMapper objectMapper) {
+        return new SearchProjectionEventHandler(mediaSearch, objectMapper);
     }
 }
