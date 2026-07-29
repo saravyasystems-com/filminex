@@ -50,6 +50,7 @@ class OutboxIntegrationTests {
     void prepareDatabase() {
         jdbcClient.sql("delete from filminex.event_outbox").update();
         jdbcClient.sql("delete from filminex.project").update();
+        jdbcClient.sql("delete from filminex.workspace_membership").update();
         jdbcClient.sql("delete from filminex.workspace").update();
         jdbcClient.sql("insert into filminex.workspace (id, name) values (:id, 'Outbox Test')")
                 .param("id", WORKSPACE_ID)
