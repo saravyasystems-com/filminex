@@ -5,9 +5,9 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 import static com.tngtech.archunit.library.dependencies.SlicesRuleDefinition.slices;
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.tngtech.archunit.core.domain.Dependency;
 import com.tngtech.archunit.core.domain.JavaClass;
 import com.tngtech.archunit.core.domain.JavaClasses;
-import com.tngtech.archunit.core.domain.JavaDependency;
 import com.tngtech.archunit.core.importer.ClassFileImporter;
 import java.util.Map;
 import java.util.Set;
@@ -113,7 +113,7 @@ class ModularMonolithArchitectureTests {
                 continue;
             }
 
-            for (JavaDependency dependency : origin.getDirectDependenciesFromSelf()) {
+            for (Dependency dependency : origin.getDirectDependenciesFromSelf()) {
                 String targetModule = moduleOf(dependency.getTargetClass());
                 if (targetModule == null || sourceModule.equals(targetModule)) {
                     continue;
