@@ -9,6 +9,10 @@
 - **Genesis:** frozen product and platform baseline
 - **Architecture:** current system structure, boundaries, and quality attributes
 - **Software design:** module internals, interfaces, schemas, and contracts
+
+## Implemented designs
+
+- [Modular monolith dependency design](module-dependencies.md)
 - **ADRs:** why consequential technical choices were made
 - **Sprint artifacts:** delivery scope, sequencing, evidence, and exit review
 - **Code, API definitions, migrations, and tests:** executable truth
