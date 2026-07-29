@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.transaction.annotation.Transactional;
 
-final class OutboxDispatcher {
+class OutboxDispatcher {
 
     private final JdbcClient jdbcClient;
     private final List<DomainEventHandler> handlers;
