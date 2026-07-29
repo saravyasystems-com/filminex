@@ -49,7 +49,7 @@ class ModularMonolithArchitectureTests {
                             "knowledge",
                             Set.of("audit", "characters", "locations", "wardrobe")),
                     Map.entry(
-                            "localization", Set.of("assets", "characters", "rights")),
+                            "localization", Set.of("assets", "characters", "identity", "rights")),
                     Map.entry("locations", Set.of("assets", "audit")),
                     Map.entry(
                             "production",
