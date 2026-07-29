@@ -14,6 +14,7 @@
 - Workstream 1 module boundaries and architecture tests, verified by CI and merged through PR #1
 - Workstream 2 PostgreSQL and Flyway foundation, verified by CI and merged through PR #2
 - Workstream 3 object-storage abstraction, verified by CI and merged through PR #3
+- Workstream 4 Solr infrastructure, verified by CI and merged through PR #4
 
 ## Frozen architectural baseline
 
@@ -38,9 +39,7 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 ## Current gaps
 
 - The React/TypeScript/Vite frontend has not yet been scaffolded or verified.
-- Solr infrastructure and its vendor-neutral search adapter are implemented; CI verification
-  is pending in Sprint 0 Workstream 4.
-- The outbox/indexing worker and remaining local infrastructure are not implemented.
+- Event/outbox implementation and CI verification are in progress in Sprint 0 Workstream 5.
 - Identity, capability, audit, AI, rights, localization, and MTI boundary interfaces exist;
   their functional contracts and adapters are not implemented.
 - Architecture and software-design documents remain incomplete as listed in the Sprint 0 register.
@@ -54,4 +53,4 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 
 ## Next delivery slice
 
-Verify and merge the Solr infrastructure, then implement event-driven indexing and rebuild.
+Verify the transactional outbox and event-driven indexing foundation.
