@@ -73,7 +73,16 @@ Java 25 is required. Use the checked-in Gradle wrapper:
 ./gradlew :apps:filminex-api:bootRun
 ```
 
-The Sprint 0 frontend direction is React, TypeScript, and Vite; its scaffold is the next engineering foundation deliverable.
+The frontend requires Node.js 24:
+
+```shell
+cd apps/filminex-web
+npm ci
+npm test
+npm run dev
+```
+
+Use `npm run build` to compile TypeScript and create the production bundle.
 
 ## License
 

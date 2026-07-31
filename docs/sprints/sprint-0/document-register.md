@@ -15,7 +15,7 @@ Documents are updated with the implementation they guide or verify. `Planned` me
 | A-09 | Localization Architecture | Architecture | Implemented foundation | Subtitle, dubbing, transcript, voice and export boundaries |
 | A-10 | Media Transparency Architecture | Architecture | Implemented foundation | MTI evaluation and export disclosure boundary |
 | A-11 | Deployment Architecture | Architecture | Planned | Environments, runtime services, configuration |
-| A-12 | Frontend Architecture | Architecture | In progress | React/TypeScript/Vite workspace boundary and API integration |
+| A-12 | Frontend Architecture | Architecture | Implemented foundation | React/TypeScript/Vite workspace boundary and deferred API integration |
 | D-01 | Repository and Package Design | Software design | In progress | Source layout, package ownership, dependency direction |
 | D-02 | Workspace and Identity Design | Software design | Implemented | Entities, services, authorization ports |
 | D-03 | Capability Engine Design | Software design | Planned | Evaluation inputs, decisions, API |
@@ -28,7 +28,7 @@ Documents are updated with the implementation they guide or verify. `Planned` me
 | D-10 | API Conventions | Software design | Planned | Versioning, errors, pagination, idempotency |
 | D-11 | Database Schema | Software design | Planned | Tables, keys, indexes, migration ownership |
 | D-12 | Test Strategy | Software design | Planned | Unit, integration, architecture, contract, migration tests |
-| D-13 | Frontend Foundation Design | Software design | Planned | Application shell, routing, state, API client, test and build conventions |
+| D-13 | Frontend Foundation Design | Software design | Implemented foundation | Application shell, context state, capability visibility, inspector, test and build conventions |
 
 ## ADR register
 
