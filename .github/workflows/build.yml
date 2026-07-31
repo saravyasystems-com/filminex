@@ -49,6 +49,11 @@ jobs:
         with:
           distribution: temurin
           java-version: "25"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: apps/filminex-web/package-lock.json
       - uses: gradle/actions/setup-gradle@v5
       - name: Initialize Solr core
         run: |
@@ -57,3 +62,9 @@ jobs:
           docker exec "$solr_container_id" solr create_core -c filminex
       - name: Verify
         run: ./gradlew test
+      - name: Verify frontend
+        working-directory: apps/filminex-web
+        run: |
+          npm ci
+          npm test
+          npm run build

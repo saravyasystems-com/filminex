@@ -1,6 +1,6 @@
 # Filminex Project State
 
-**Updated:** 30 July 2026
+**Updated:** 31 July 2026
 **Delivery phase:** Sprint 0 — Platform Foundation  
 **Genesis:** Frozen and closed
 
@@ -22,6 +22,7 @@
 - Workstream 9 provider-agnostic AI Engine foundation, verified by CI and merged through PR #9
 - Workstream 10 rights-provider foundation, verified by CI and merged through PR #10
 - Workstream 11 localization foundation, verified by CI and merged through PR #11
+- Workstream 12 media-transparency foundation, verified by CI and merged through PR #12
 
 ## Frozen architectural baseline
 
@@ -45,11 +46,11 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 
 ## Current gaps
 
-- The React/TypeScript/Vite frontend has not yet been scaffolded or verified.
+- The React/TypeScript/Vite frontend shell is implemented; CI evidence is pending.
 - Workspace and identity persistence, membership roles, and authorization seam are operational.
 - The AI Engine foundation is verified by CI and merged through Sprint 0 Workstream 9.
 - The rights-provider foundation is verified by CI and merged through Sprint 0 Workstream 10.
-- The MTI foundation is implemented by Sprint 0 Workstream 12; CI evidence is pending.
+- The MTI foundation is verified by CI and merged through Sprint 0 Workstream 12.
 - Architecture and software-design documents remain incomplete as listed in the Sprint 0 register.
 - MTI governance and IP workstream documents are not yet written.
 
@@ -61,4 +62,4 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 
 ## Next delivery slice
 
-Verify the MTI foundation, then begin the frontend foundation.
+Verify the frontend foundation, then run Sprint 0 integration and exit verification.

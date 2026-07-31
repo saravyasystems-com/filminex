@@ -94,7 +94,8 @@ Sprint 0 establishes foundations. It does not implement filmmaking feature depth
 | 9/14 — Provider-Agnostic AI Engine Foundation | Complete | Provider-neutral tasks and normalized results, Capability Engine enforcement, durable request audit, deterministic local adapter, isolated Grok adapter boundary, tests, [AI Engine design](../../architecture/ai-engine.md), and green CI in PR #9 |
 | 10/14 — Rights Provider Foundation | Complete | Provider-neutral rights requests and explainable decisions, admin-managed local grants, workspace isolation, durable audit evidence, Flyway V6, integration tests, [rights-provider design](../../architecture/rights-provider.md), and green CI in PR #10 |
 | 11/14 — Localization Foundation | Complete | Locale-aware subtitle, caption, transcript, and dub tracks; timed cues; voice profiles; reviewed searchable text; Flyway V7; integration tests; [localization design](../../architecture/localization-foundation.md); and green CI in PR #11 |
-| 12/14 — Media Transparency Foundation | Implemented; CI verification pending | Explainable MTI-001 applicability, image/video icon and audio metadata export instructions, audit evidence, integration tests, and [media-transparency design](../../architecture/media-transparency.md) |
+| 12/14 — Media Transparency Foundation | Complete | Explainable MTI-001 applicability, image/video icon and audio metadata export instructions, audit evidence, integration tests, [media-transparency design](../../architecture/media-transparency.md), and green CI in PR #12 |
+| 13/14 — Frontend Foundation | Implemented; CI verification pending | React/TypeScript/Vite workspace shell, capability-filtered navigation, hierarchy selection, context inspector, responsive layout, unit tests, production build, [frontend design](../../architecture/frontend-foundation.md), and frontend CI |
 
 ## Exit criteria
 
