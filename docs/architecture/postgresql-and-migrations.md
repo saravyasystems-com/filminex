@@ -27,7 +27,7 @@ and fails application startup if validation or migration fails.
   persistence and across module boundaries.
 - Store timestamps with time zone and interpret them as UTC.
 
-## Initial schema
+## Foundation schema
 
 `V1__create_workspace_and_project_foundation.sql` establishes:
 
@@ -36,15 +36,17 @@ and fails application startup if validation or migration fails.
 - referential integrity and a workspace-scoped unique project name;
 - an index supporting project lookup by workspace.
 
-Deeper story, media, localization, rights, audit, and outbox schemas belong to
-their respective workstreams.
+Later versioned migrations add the event outbox, identity and membership,
+append-only audit history, workspace entitlements, local rights grants, and
+localization tracks/cues/voice profiles. The authoritative table inventory is
+maintained in [Database Schema](database-schema.md).
 
 ## Verification
 
 CI starts a real PostgreSQL 17 service, launches the Spring application context,
 allows Flyway to migrate the database, and asserts:
 
-- one migration completed successfully;
+- all seven Sprint 0 migrations completed successfully;
 - the `workspace` table exists;
 - the `project` table exists.
 

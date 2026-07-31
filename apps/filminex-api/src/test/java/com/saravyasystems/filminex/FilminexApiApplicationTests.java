@@ -18,16 +18,21 @@ class FilminexApiApplicationTests {
         Long appliedMigrations = jdbcClient.sql("""
                         select count(*)
                         from filminex.flyway_schema_history
-                        where version in ('1', '2')
+                        where version in ('1', '2', '3', '4', '5', '6', '7')
                           and success = true
                         """)
                 .query(Long.class)
                 .single();
 
-        assertThat(appliedMigrations).isEqualTo(2L);
+        assertThat(appliedMigrations).isEqualTo(7L);
         assertThat(tableExists("workspace")).isTrue();
         assertThat(tableExists("project")).isTrue();
         assertThat(tableExists("event_outbox")).isTrue();
+        assertThat(tableExists("workspace_membership")).isTrue();
+        assertThat(tableExists("audit_event")).isTrue();
+        assertThat(tableExists("workspace_entitlement")).isTrue();
+        assertThat(tableExists("local_rights_grant")).isTrue();
+        assertThat(tableExists("localization_track")).isTrue();
     }
 
     private boolean tableExists(String tableName) {

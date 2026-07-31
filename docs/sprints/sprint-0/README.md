@@ -1,6 +1,6 @@
 # Sprint 0 — Platform Foundation
 
-**Status:** In progress  
+**Status:** Exit verification candidate
 **Started:** 18 July 2026  
 **Genesis baseline:** [Filminex Genesis](../../genesis/README.md)
 
@@ -95,7 +95,8 @@ Sprint 0 establishes foundations. It does not implement filmmaking feature depth
 | 10/14 — Rights Provider Foundation | Complete | Provider-neutral rights requests and explainable decisions, admin-managed local grants, workspace isolation, durable audit evidence, Flyway V6, integration tests, [rights-provider design](../../architecture/rights-provider.md), and green CI in PR #10 |
 | 11/14 — Localization Foundation | Complete | Locale-aware subtitle, caption, transcript, and dub tracks; timed cues; voice profiles; reviewed searchable text; Flyway V7; integration tests; [localization design](../../architecture/localization-foundation.md); and green CI in PR #11 |
 | 12/14 — Media Transparency Foundation | Complete | Explainable MTI-001 applicability, image/video icon and audio metadata export instructions, audit evidence, integration tests, [media-transparency design](../../architecture/media-transparency.md), and green CI in PR #12 |
-| 13/14 — Frontend Foundation | Implemented; CI verification pending | React/TypeScript/Vite workspace shell, capability-filtered navigation, hierarchy selection, context inspector, responsive layout, unit tests, production build, [frontend design](../../architecture/frontend-foundation.md), and frontend CI |
+| 13/14 — Frontend Foundation | Complete | React/TypeScript/Vite workspace shell, capability-filtered navigation, hierarchy selection, context inspector, responsive layout, unit tests, production build, [frontend design](../../architecture/frontend-foundation.md), and green CI in PR #13 |
+| 14/14 — Integration and Exit Verification | Candidate; CI verification pending | Full exit matrix, migration coverage through V7, repository hygiene gate, completed foundation register, and [exit review](exit-review.md) |
 
 ## Exit criteria
 

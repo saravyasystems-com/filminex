@@ -55,6 +55,8 @@ jobs:
           cache: npm
           cache-dependency-path: apps/filminex-web/package-lock.json
       - uses: gradle/actions/setup-gradle@v5
+      - name: Verify repository whitespace
+        run: git diff --check HEAD^ HEAD
       - name: Initialize Solr core
         run: |
           solr_container_id="$(docker ps --filter ancestor=solr:9.8.1 --quiet)"
