@@ -45,6 +45,8 @@ jobs:
       FILMINEX_SOLR_URL: http://localhost:8983/solr/filminex
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - uses: actions/setup-java@v5
         with:
           distribution: temurin
@@ -55,6 +57,8 @@ jobs:
           cache: npm
           cache-dependency-path: apps/filminex-web/package-lock.json
       - uses: gradle/actions/setup-gradle@v5
+      - name: Verify repository whitespace
+        run: git diff --check HEAD^ HEAD
       - name: Initialize Solr core
         run: |
           solr_container_id="$(docker ps --filter ancestor=solr:9.8.1 --quiet)"

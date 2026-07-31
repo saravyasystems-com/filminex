@@ -23,6 +23,7 @@
 - Workstream 10 rights-provider foundation, verified by CI and merged through PR #10
 - Workstream 11 localization foundation, verified by CI and merged through PR #11
 - Workstream 12 media-transparency foundation, verified by CI and merged through PR #12
+- Workstream 13 frontend foundation, verified by CI and merged through PR #13
 
 ## Frozen architectural baseline
 
@@ -44,14 +45,15 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 - Frontend: React, TypeScript, and Vite.
 - Authentication: provider-neutral seam with a lightweight local-development identity adapter; external provider selection is deferred.
 
-## Current gaps
+## Sprint 0 exit candidate
 
-- The React/TypeScript/Vite frontend shell is implemented; CI evidence is pending.
+- The React/TypeScript/Vite frontend shell is verified by CI and merged.
 - Workspace and identity persistence, membership roles, and authorization seam are operational.
 - The AI Engine foundation is verified by CI and merged through Sprint 0 Workstream 9.
 - The rights-provider foundation is verified by CI and merged through Sprint 0 Workstream 10.
 - The MTI foundation is verified by CI and merged through Sprint 0 Workstream 12.
-- Architecture and software-design documents remain incomplete as listed in the Sprint 0 register.
+- Architecture and software-design foundation documents match the implemented boundaries.
+- Workstream 14 must pass CI and be accepted before Sprint 0 is closed.
 - MTI governance and IP workstream documents are not yet written.
 
 ## Deferred
@@ -62,4 +64,4 @@ The frozen baseline is recorded in ADR-0001 through ADR-0019, ADR-0022, and ADR-
 
 ## Next delivery slice
 
-Verify the frontend foundation, then run Sprint 0 integration and exit verification.
+Run Workstream 14 CI, review the exit evidence, and close Sprint 0 after acceptance.

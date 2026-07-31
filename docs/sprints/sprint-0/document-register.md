@@ -1,33 +1,34 @@
 # Sprint 0 Document Register
 
-Documents are updated with the implementation they guide or verify. `Planned` means required for Sprint 0 exit; `In progress` means a governing ADR or initial implementation exists.
+Documents are updated with the implementation they guide or verify. `Implemented foundation`
+means the Sprint 0 boundary is recorded; later feature and production depth remains versioned work.
 
 | ID | Document | Type | Status | Purpose |
 | --- | --- | --- | --- | --- |
-| A-01 | System Context and Containers | Architecture | Planned | Users, external systems, deployable boundaries |
-| A-02 | Module Architecture | Architecture | In progress | Capability boundaries, ports, adapters, allowed dependencies |
-| A-03 | Data and Asset Architecture | Architecture | In progress | PostgreSQL ownership, migrations, object-storage boundaries |
-| A-04 | Search and Indexing Architecture | Architecture | In progress | Solr projection, indexing worker, replay and rebuild |
-| A-05 | Security and Tenancy Architecture | Architecture | In progress | Authentication seam, workspace isolation, authorization |
+| A-01 | System Context and Containers | Architecture | Implemented foundation | Users, external systems, deployable boundaries |
+| A-02 | Module Architecture | Architecture | Implemented foundation | Capability boundaries, ports, adapters, allowed dependencies |
+| A-03 | Data and Asset Architecture | Architecture | Implemented foundation | PostgreSQL ownership, migrations, object-storage boundaries |
+| A-04 | Search and Indexing Architecture | Architecture | Implemented foundation | Solr projection, indexing worker, replay and rebuild |
+| A-05 | Security and Tenancy Architecture | Architecture | Implemented foundation | Authentication seam, workspace isolation, authorization |
 | A-06 | AI Provider Architecture | Architecture | Implemented foundation | AI Engine port, Grok adapter, provider-neutral contracts |
-| A-07 | Logging and Observability Architecture | Architecture | In progress | Audit events, operational telemetry, correlation |
+| A-07 | Logging and Observability Architecture | Architecture | Implemented foundation | Audit events, operational telemetry boundary, correlation |
 | A-08 | Rights Provider Architecture | Architecture | Implemented foundation | Local provider and deferred FTRP integration |
 | A-09 | Localization Architecture | Architecture | Implemented foundation | Subtitle, dubbing, transcript, voice and export boundaries |
 | A-10 | Media Transparency Architecture | Architecture | Implemented foundation | MTI evaluation and export disclosure boundary |
-| A-11 | Deployment Architecture | Architecture | Planned | Environments, runtime services, configuration |
+| A-11 | Deployment Architecture | Architecture | Implemented foundation | Environments, runtime services, configuration |
 | A-12 | Frontend Architecture | Architecture | Implemented foundation | React/TypeScript/Vite workspace boundary and deferred API integration |
-| D-01 | Repository and Package Design | Software design | In progress | Source layout, package ownership, dependency direction |
+| D-01 | Repository and Package Design | Software design | Implemented foundation | Source layout, package ownership, dependency direction |
 | D-02 | Workspace and Identity Design | Software design | Implemented | Entities, services, authorization ports |
-| D-03 | Capability Engine Design | Software design | Planned | Evaluation inputs, decisions, API |
+| D-03 | Capability Engine Design | Software design | Implemented foundation | Evaluation inputs, decisions, API |
 | D-04 | Logging and Audit Design | Software design | Implemented | Event schema, append flow, retention and redaction seams |
 | D-05 | AI Engine Design | Software design | Implemented foundation | Task contract, adapter SPI, normalized results |
-| D-06 | Search and Indexing Design | Software design | Planned | Projection schema, outbox consumer, retries and rebuild |
+| D-06 | Search and Indexing Design | Software design | Implemented foundation | Projection schema, outbox consumer, retries and rebuild |
 | D-07 | Rights Provider Design | Software design | Implemented foundation | Request/decision contract and local adapter |
 | D-08 | Localization Design | Software design | Implemented foundation | Tracks, cues, dub lines, locale and voice-profile contracts |
 | D-09 | MTI Integration Design | Software design | Implemented foundation | Applicability decision and image/video/audio disclosure output |
-| D-10 | API Conventions | Software design | Planned | Versioning, errors, pagination, idempotency |
-| D-11 | Database Schema | Software design | Planned | Tables, keys, indexes, migration ownership |
-| D-12 | Test Strategy | Software design | Planned | Unit, integration, architecture, contract, migration tests |
+| D-10 | API Conventions | Software design | Implemented foundation | Versioning, errors, pagination, idempotency |
+| D-11 | Database Schema | Software design | Implemented foundation | Tables, keys, indexes, migration ownership |
+| D-12 | Test Strategy | Software design | Implemented foundation | Unit, integration, architecture, contract, migration tests |
 | D-13 | Frontend Foundation Design | Software design | Implemented foundation | Application shell, context state, capability visibility, inspector, test and build conventions |
 
 ## ADR register
